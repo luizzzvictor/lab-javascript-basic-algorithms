@@ -53,56 +53,33 @@ if (hacker1 < hacker2) {
 
 // Bonus 1
 
-// Bonus 2
+// Bonus 2 - CHECKING PALINDROMES
 
-// let phraseToCheck = "put it up";
-
-// function checarPalindromo() {
-//   let frenteTrás = "";
-//   let trasFrente = "";
-
-//   for (i = 0; i < phraseToCheck.length; i++) {
-//     frenteTrás = frenteTrás + phraseToCheck[i];
-//   }
-//   for (i = phraseToCheck.length - 1; i >= 0; i--) {
-//     trasFrente = trasFrente + phraseToCheck[i];
-//   }
-//   console.log(`'${frenteTrás}', cuja inversão é '${trasFrente}'`);
-//   if (frenteTrás === trasFrente) {
-//     console.log("Trata-se de um PALÍNDROMO!")
-//   } else {
-//     console.log("Não é um PALÍNDROMO!")
-//   }
-// }
-
-// checarPalindromo();
-
-
-let phraseToCheck = "put it up";
+let phraseToCheck = "A man, a plan, a canal, Panama!";
 
 function checarPalindromo() {
   let frenteTrás = "";
   let trasFrente = "";
 
   for (i = 0; i < phraseToCheck.length; i++) {
-    if (phraseToCheck[i] === " ") {
-        continue;
-    }   else {
-        frenteTrás = frenteTrás + phraseToCheck[i];
-    } 
+    if (phraseToCheck[i] === " " || phraseToCheck[i] === ",") {
+      continue;
+    } else {
+      frenteTrás = frenteTrás + phraseToCheck[i];
+    }
   }
   for (i = phraseToCheck.length - 1; i >= 0; i--) {
-    if (phraseToCheck[i] === " ") {
-        continue;
+    if (phraseToCheck[i] === " " || phraseToCheck[i] === ",") {
+      continue;
     } else {
-        trasFrente = trasFrente + phraseToCheck[i];
+      trasFrente = trasFrente + phraseToCheck[i];
     }
   }
   console.log(`'${frenteTrás}', cuja inversão é '${trasFrente}'`);
-  if (frenteTrás === trasFrente) {
-    console.log("Trata-se de um PALÍNDROMO!")
+  if (frenteTrás.toUpperCase === trasFrente.toUpperCase) {
+    console.log(`O termo '${phraseToCheck}' constitui um PAlÍNDROMO!`);
   } else {
-    console.log("Não é um PALÍNDROMO!")
+    console.log(`O termo '${phraseToCheck}' NÃO constitui um PAlÍNDROMO!`);
   }
 }
 
