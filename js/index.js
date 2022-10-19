@@ -25,7 +25,7 @@ let nomeMesmaLinha = "";
 
 function logNomeInteiro() {
   for (i = 0; i < hacker1.length; i++) {
-    nomeMesmaLinha = nomeMesmaLinha + hacker1[i].toUpperCase();
+    nomeMesmaLinha = nomeMesmaLinha + hacker1[i].toUpperCase() + " ";
   }
   console.log(nomeMesmaLinha);
 }
